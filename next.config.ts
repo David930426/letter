@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Builds the whole site to plain static files in ./out — no server needed.
+  // Drag that folder onto Netlify Drop, or push it to GitHub Pages.
+  output: "export",
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

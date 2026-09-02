@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F5E1DA"/><stop offset="1" stop-color="#DDB2A5"/>
+    </linearGradient>
+    <radialGradient id="v" cx="50%" cy="42%" r="72%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1500" height="1100" fill="url(#g)"/>
+  <rect width="1500" height="1100" fill="url(#v)"/>
+  <g transform="translate(750 495)" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="13.200000000000001">
+    <path d="M0 176 C -22 66 -220 55 -220 -22
+             C -220 -132 -88 -165 0 -55
+             C 88 -165 220 -132 220 -22
+             C 220 55 22 66 0 176 Z"/>
+  </g>
+  <text x="750" y="880" text-anchor="middle"
+        font-family="Georgia, serif" font-size="60.5" fill="#fff" fill-opacity=".85"
+        letter-spacing="22">YOUR PHOTO</text>
+  <rect x="33" y="33" width="1434" height="1034"
+        fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" rx="4"/>
+</svg>

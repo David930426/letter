@@ -1,3 +1,9 @@
+# sharp is only used by Next's image optimiser, which this project does not use
+# (next.config.ts sets output: "export" with images.unoptimized), and
+# unrs-resolver ships prebuilt binaries. Neither needs to run a build script.
+allowBuilds:
+  sharp: false
+  unrs-resolver: false
 ignoredBuiltDependencies:
   - sharp
   - unrs-resolver
