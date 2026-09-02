@@ -255,6 +255,7 @@ body.locked {
   border: 0;
   padding: 0;
   cursor: pointer;
+  perspective: 1000px;
   transition: transform 0.6s var(--ease);
 }
 .envelope:hover {
@@ -282,23 +283,33 @@ body.locked {
   border-radius: 4px;
   box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.55);
   transform: translateY(0);
-  transition: transform 0.9s var(--ease);
+  transition: transform 0.85s var(--ease-out) 0.28s;
   z-index: 2;
 }
 
 .envelope__front {
   background: linear-gradient(160deg, #efcfc2, #e2b3a6);
   border-radius: 8px;
-  clip-path: polygon(0 22%, 50% 66%, 100% 22%, 100% 100%, 0 100%);
+  /* Pocket with a V cut out of the top. The V starts at the two top corners
+     so the flap below can cover it exactly — mismatched corners are what let
+     the paper and the inside of the envelope leak out at the sides.
+     The bottom runs past 100% so border-radius, not clip-path, shapes the
+     bottom corners and they stay rounded. */
+  clip-path: polygon(0 0, 50% 46%, 100% 0, 100% 101%, 0 101%);
   z-index: 3;
 }
 
 .envelope__flap {
   background: linear-gradient(180deg, #f6ded4, #e9c2b5);
-  clip-path: polygon(0 0, 100% 0, 50% 62%);
+  /* same top corners as the front's V, 2% deeper, so it covers the notch
+     completely with no seam and nothing shows through when sealed */
+  clip-path: polygon(0 0, 100% 0, 50% 48%);
   border-radius: 8px 8px 0 0;
+  /* the shapes tile exactly now, so the fold needs a shadow to read as one */
+  filter: drop-shadow(0 2px 3px rgba(74, 40, 30, 0.16));
   transform-origin: top center;
-  transition: transform 0.7s var(--ease);
+  transform-style: preserve-3d;
+  transition: transform 0.6s var(--ease-out);
   z-index: 4;
 }
 
@@ -328,12 +339,20 @@ body.locked {
 .envelope.is-open .envelope__flap {
   transform: rotateX(180deg);
 }
+/* Halfway through the fold the flap has passed upright and is now behind the
+   envelope, so it must stop painting over the paper sliding out. Intro.tsx
+   adds this class at that moment — z-index cannot be tweened reliably. */
+.envelope.is-folded .envelope__flap {
+  z-index: 1;
+}
 .envelope.is-open .envelope__seal {
   transform: translate(-50%, -50%) scale(0.2);
   opacity: 0;
 }
 .envelope.is-open .envelope__paper {
-  transform: translateY(-58%);
+  /* far enough to read as "sliding out", but its bottom edge stays below the
+     notch so the paper still looks tucked into the pocket */
+  transform: translateY(-50%);
 }
 
 /* ========================================================== BACKGROUNDS */
@@ -1145,9 +1164,11 @@ body.opened .hero__scroll {
 }
 .cake__flame {
   position: absolute;
-  left: 50%;
+  /* Centred with `left` alone, on purpose: the flicker animation owns
+     `transform`, and a `translate: -50%` here would compound with the
+     translateX inside it and push the flame off the side of the candle. */
+  left: calc(50% - 6px);
   bottom: 96px;
-  translate: -50% 0;
   width: 12px;
   height: 18px;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
@@ -1162,16 +1183,16 @@ body.opened .hero__scroll {
 @keyframes flicker {
   0%,
   100% {
-    transform: translateX(-50%) scale(1) rotate(-2deg);
+    transform: scale(1) rotate(-2deg);
   }
   50% {
-    transform: translateX(-50%) scale(1.12, 0.94) rotate(2deg);
+    transform: scale(1.12, 0.94) rotate(2deg);
   }
 }
 .cake.is-out .cake__flame {
   opacity: 0;
   animation: none;
-  transform: translateX(-50%) scale(0.2);
+  transform: scale(0.2);
 }
 
 /* =============================================================== FOOTER */

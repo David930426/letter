@@ -11,6 +11,7 @@ function toTop() {
 /** The sealed envelope shown over the page until she opens it. */
 export default function Intro() {
   const [opened, setOpened] = useState(false);
+  const [folded, setFolded] = useState(false);
   const [gone, setGone] = useState(false);
   const [removed, setRemoved] = useState(false);
 
@@ -34,14 +35,21 @@ export default function Intro() {
     // "opened" lets the hero start rising while the overlay is still clearing
     document.body.classList.add("opened");
 
+    // halfway through the 0.6s fold the flap is behind the envelope, so let it
+    // drop below the paper before the paper starts sliding out at 0.28s
+    const f = window.setTimeout(() => setFolded(true), reduced ? 0 : 260);
+
+    // hold until the flap has folded and the paper has finished sliding out
+    // (flap 0.6s, paper 0.28s delay + 0.85s), then clear the overlay
     const a = window.setTimeout(() => {
       setGone(true);
       document.body.classList.remove("locked");
-    }, reduced ? 100 : 850);
+    }, reduced ? 100 : 1150);
 
-    const b = window.setTimeout(() => setRemoved(true), reduced ? 400 : 2300);
+    const b = window.setTimeout(() => setRemoved(true), reduced ? 400 : 2600);
 
     return () => {
+      window.clearTimeout(f);
       window.clearTimeout(a);
       window.clearTimeout(b);
     };
@@ -64,7 +72,7 @@ export default function Intro() {
 
         <button
           type="button"
-          className={`envelope${opened ? " is-open" : ""}`}
+          className={`envelope${opened ? " is-open" : ""}${folded ? " is-folded" : ""}`}
           onClick={open}
           aria-label="Open the letter"
         >

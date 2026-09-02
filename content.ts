@@ -13,7 +13,7 @@ export const content = {
   /* ---------------------------------------------------------------- BASICS */
   meta: {
     // Shows in the browser tab
-    pageTitle: "Happy Birthday, Her Name",
+    pageTitle: "Happy Birthday, Dealova",
     // Used by link previews when you share the site
     description: "A little something made by hand.",
     // Tab icon (any emoji)
@@ -24,7 +24,7 @@ export const content = {
      The little sealed envelope she sees before the site opens.             */
   envelope: {
     smallLine: "A letter has arrived for",
-    name: "Her Name",
+    name: "Dealova Gunawan Tanputeri",
     buttonLabel: "Open it",
     hint: "click the envelope",
   },
@@ -33,7 +33,7 @@ export const content = {
   hero: {
     eyebrow: "Today is a very important day",
     title: "Happy Birthday",
-    name: "Her Name",
+    name: "Dealova",
     subtitle:
       "This is dummy text that you will replace later. Write here the first thing you would say to her if the whole world went quiet for one second.",
     dateLine: "09 . 09 . 2026",
@@ -69,8 +69,8 @@ export const content = {
       "Use this one for the harder, truer part. What she changed about your life. What you were like before her. What you are afraid of forgetting. Be specific; specific is what makes someone cry in a good way.",
       "Close with what you want for her this year - not what you want from her. Her dreams, her health, her peace, the things she keeps saying she will start next month.",
     ],
-    signoff: "All of it, always,",
-    signature: "Your Name",
+    signoff: "All of it, my sayang,",
+    signature: "David Gunawan Wisno",
   },
 
   /* ------------------------------------------------------------- STORY ---
