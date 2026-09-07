@@ -15,7 +15,7 @@ export const content = {
     // Shows in the browser tab
     pageTitle: "Happy Birthday, Dealova",
     // Used by link previews when you share the site
-    description: "A little something made by hand.",
+    description: "A little something made by love.",
     // Tab icon (any emoji)
     favicon: "🎂",
   },
@@ -35,7 +35,7 @@ export const content = {
     title: "Happy Birthday",
     name: "Dealova",
     subtitle:
-      "This is dummy text that you will replace later. Write here the first thing you would say to her if the whole world went quiet for one second.",
+      "Happy 21st birthday my love, be this year and next next year be the greatest year for you",
     dateLine: "09 . 09 . 2026",
     scrollHint: "scroll down",
   },
@@ -47,7 +47,7 @@ export const content = {
     title: "And we have been us for",
     startDate: "2024-10-25T01:00:00",
     footnote:
-      "Dummy footnote - write something small and warm here, like a private joke or the place where it all started.",
+      "The time counts that never will be ended forever",
     labels: {
       years: "years",
       days: "days",
@@ -64,10 +64,10 @@ export const content = {
     kicker: "A letter",
     title: "To the best thing that ever happened to me",
     paragraphs: [
-      "This is placeholder text and you should replace every word of it. Start the way you actually talk to her, not the way letters are supposed to sound. Tell her what today means and why you wanted to build something instead of buying something.",
-      "Write the second paragraph about a small ordinary moment - the way she laughs at her own jokes before the punchline, the song she plays too loud in the car, the face she makes when she is concentrating. Small things are more convincing than big words.",
-      "Use this one for the harder, truer part. What she changed about your life. What you were like before her. What you are afraid of forgetting. Be specific; specific is what makes someone cry in a good way.",
-      "Close with what you want for her this year - not what you want from her. Her dreams, her health, her peace, the things she keeps saying she will start next month.",
+      "Happy birthday Dea, i hope you will big love for God and family and of course for me hehe and the best wishes is all for you",
+      "I know thisbtear will be harder for both of us when we decided to take the master degree, but i know with 1 more years old, you will be more wiser and we be more courages facing all the problems and i know you can do it.",
+      "You are best women i have ever met and the bravest girl that i met, i never let you go and i will always loves you forever.",
+      "I hope we will continue everlasting, we will struggle together and i hope you will have the God’s characteristics in your heart and always follow the God Leads. God Bless You.",
     ],
     signoff: "All of it, my sayang,",
     signature: "David Gunawan Wisno",
@@ -78,32 +78,32 @@ export const content = {
      image: put your file in public/img/ and write "/img/your-file.jpg"    */
   story: {
     kicker: "Our story",
-    title: "The long way here",
+    title: "The long & hard way to here",
     subtitle:
-      "Dummy subtitle - a single line that introduces your timeline of moments.",
+      "Amazing, lovely, fun relationship that God gave",
     items: [
       {
         date: "Chapter One",
         title: "The day we met",
-        text: "Dummy text. Describe where you were, what she was wearing, what you stupidly said first, and what you thought the moment she turned around.",
+        text: "I did not know that day was going to change my whole life. You were just someone I met, and now you are the person I cannot imagine a single day without. God really knew what He was doing when He put you in front of me.",
         image: "/img/story-01.svg",
       },
       {
         date: "Chapter Two",
         title: "The first real conversation",
-        text: "Dummy text. The night that went too long, the messages you re-read, the exact moment you knew this was not going to be casual.",
+        text: "The night we talked and talked and forgot what time it was. I kept re-reading our chat after you slept, and that was the exact moment I knew this was never going to be a casual thing for me.",
         image: "/img/story-02.svg",
       },
       {
         date: "Chapter Three",
         title: "The first trip",
-        text: "Dummy text. Somewhere far or somewhere ten minutes away - write about the version of her you only get to see when nobody else is around.",
+        text: "Going anywhere with you is my favourite thing, far away or only ten minutes from home. I get to see the version of you that only comes out when nobody else is watching, and that one is the one I love the most.",
         image: "/img/story-03.svg",
       },
       {
         date: "Chapter Four",
         title: "Today",
-        text: "Dummy text. Where you are now, and the fact that you would choose all of it again, including the parts that were hard.",
+        text: "And now here we are. From 25 October 2024 until today, two people chasing their master degrees and still choosing each other every single day. I would choose all of it again, even the hard parts, as long as it ends with you.",
         image: "/img/story-04.svg",
       },
     ],
@@ -114,16 +114,16 @@ export const content = {
   gallery: {
     kicker: "The archive",
     title: "Proof",
-    subtitle: "Dummy subtitle - one line about this pile of photos.",
+    subtitle: "A small pile of proof that we were here, being happy and silly together.",
     photos: [
-      { src: "/img/photo-01.svg", caption: "Dummy caption one" },
-      { src: "/img/photo-02.svg", caption: "Dummy caption two" },
-      { src: "/img/photo-03.svg", caption: "Dummy caption three" },
-      { src: "/img/photo-04.svg", caption: "Dummy caption four" },
-      { src: "/img/photo-05.svg", caption: "Dummy caption five" },
-      { src: "/img/photo-06.svg", caption: "Dummy caption six" },
-      { src: "/img/photo-07.svg", caption: "Dummy caption seven" },
-      { src: "/img/photo-08.svg", caption: "Dummy caption eight" },
+      { src: "/img/photo-01.svg", caption: "The smile I always come back to" },
+      { src: "/img/photo-02.svg", caption: "My favourite person, my favourite day" },
+      { src: "/img/photo-03.svg", caption: "We look ridiculous here and I love it" },
+      { src: "/img/photo-04.svg", caption: "Nothing special happened, that is why I keep it" },
+      { src: "/img/photo-05.svg", caption: "You laughing before the joke is finished" },
+      { src: "/img/photo-06.svg", caption: "Somewhere with you, that is always enough" },
+      { src: "/img/photo-07.svg", caption: "Proof that God is good to me" },
+      { src: "/img/photo-08.svg", caption: "And many more to come, sayang" },
     ],
   },
 
@@ -135,11 +135,11 @@ export const content = {
     kicker: "Press play",
     title: "I made you something",
     subtitle:
-      "Dummy subtitle - tell her to put headphones on, or to not watch it in public.",
+      "Put your headphones on first, and maybe do not watch this one in public.",
     youtubeId: "aqz-KE-bpKQ",
     // Leave "" to use YouTube's own thumbnail, or use "/img/your-cover.jpg"
     posterImage: "",
-    caption: "Dummy caption under the video.",
+    caption: "Made for you, only for you. Please watch it until the end.",
   },
 
   /* ----------------------------------------------------------- REASONS ---
@@ -147,37 +147,37 @@ export const content = {
   reasons: {
     kicker: "A short list",
     title: "Reasons, in no order",
-    subtitle: "Dummy subtitle - the list is obviously longer than this.",
+    subtitle: "The real list is much longer than this, but the page is not big enough.",
     items: [
       {
         icon: "☕",
-        title: "Reason one",
-        text: "Dummy text about a tiny habit of hers that you find unreasonably lovely.",
+        title: "Your mornings",
+        text: "The way you are still half asleep but you still say good morning to me first. Such a small thing, but it makes my whole day start in the right way.",
       },
       {
         icon: "🎧",
-        title: "Reason two",
-        text: "Dummy text about something she taught you without meaning to teach you anything.",
+        title: "The songs you play",
+        text: "You gave me songs I would never find by myself, and now every single one of them sounds like you.",
       },
       {
         icon: "🌧️",
-        title: "Reason three",
-        text: "Dummy text about how she is on the bad days, which is the real test.",
+        title: "You on the bad days",
+        text: "Even when everything feels heavy, you still choose to be kind and to keep praying. That is the real test, and you pass it every time.",
       },
       {
         icon: "📚",
-        title: "Reason four",
-        text: "Dummy text about the way she talks about the thing she loves.",
+        title: "How you talk about what you love",
+        text: "Your eyes change when you talk about the things you care about. I can listen to you for hours and never get bored, not even once.",
       },
       {
         icon: "🍜",
-        title: "Reason five",
-        text: "Dummy text about food, because there is always a food one.",
+        title: "Eating with you",
+        text: "Everything tastes better when I eat it with you, even the cheap one. Especially the cheap one.",
       },
       {
         icon: "🌙",
-        title: "Reason six",
-        text: "Dummy text about the late-night version of her that nobody else gets.",
+        title: "The 1 a.m. you",
+        text: "The late night version of you that nobody else gets to see. That one is mine, and I will always be thankful for it.",
       },
     ],
   },
@@ -187,16 +187,16 @@ export const content = {
   wish: {
     kicker: "One more thing",
     title: "Make a wish",
-    text: "Dummy text. Tell her to close her eyes and actually make one, and that you will spend the year trying to make it happen.",
+    text: "Close your eyes and actually make one, sayang. Whatever it is, I will spend this whole year praying for it and trying my best to help it happen.",
     buttonLabel: "Blow out the candles",
     afterTitle: "Happy Birthday",
     afterText:
-      "Dummy text shown after she presses the button. This is the last thing she reads, so make it the softest one.",
+      "You are loved, you are prayed for, and you will never walk through anything alone. Happy 21st birthday, Dea. Here is to many more years of us. God bless you, always.",
   },
 
   /* ------------------------------------------------------------- FOOTER */
   footer: {
-    text: "Made by hand, badly, with love - Your Name",
+    text: "Made by hand, badly, with love - David",
   },
 
   /* -------------------------------------------------------------- MUSIC ---
