@@ -1,4 +1,5 @@
 import { content } from "@/content";
+import { withBasePath } from "@/lib/base-path";
 import Reveal from "./Reveal";
 import ParallaxImage from "./ParallaxImage";
 
@@ -21,7 +22,7 @@ export default function Story() {
             key={item.title + i}
           >
             <div className="beat__media">
-              <ParallaxImage src={item.image} alt={item.title} />
+              <ParallaxImage src={withBasePath(item.image)} alt={item.title} />
             </div>
 
             <div className="beat__text">

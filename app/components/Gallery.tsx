@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { content } from "@/content";
+import { withBasePath } from "@/lib/base-path";
 import Reveal from "./Reveal";
 
 export default function Gallery() {
@@ -71,7 +72,7 @@ export default function Gallery() {
             key={photo.src + i}
           >
             {/* plain img: these are your own photos at unknown sizes */}
-            <img src={photo.src} alt={photo.caption} loading="lazy" />
+            <img src={withBasePath(photo.src)} alt={photo.caption} loading="lazy" />
             {photo.caption ? (
               <span className="shot__cap">{photo.caption}</span>
             ) : null}
@@ -109,7 +110,7 @@ export default function Gallery() {
           </button>
 
           <figure className="lightbox__figure">
-            <img src={current.src} alt={current.caption} />
+            <img src={withBasePath(current.src)} alt={current.caption} />
             <figcaption>{current.caption}</figcaption>
           </figure>
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { content } from "@/content";
+import { withBasePath } from "@/lib/base-path";
 
 export const PAUSE_MUSIC_EVENT = "birthday:pause-music";
 
@@ -18,7 +19,7 @@ export default function MusicButton() {
     const { enabled, file } = content.music;
     if (!enabled || !file) return;
 
-    const audio = new Audio(file);
+    const audio = new Audio(withBasePath(file));
     audio.loop = true;
     audio.volume = 0.35;
     audio.preload = "metadata";

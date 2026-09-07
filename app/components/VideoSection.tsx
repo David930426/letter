@@ -2,21 +2,32 @@
 
 import { useState } from "react";
 import { content } from "@/content";
+import { withBasePath } from "@/lib/base-path";
 import Reveal from "./Reveal";
 import { PAUSE_MUSIC_EVENT } from "./MusicButton";
+
+// A last-resort cover as an inline SVG, so it never depends on a file that
+// might not exist and can never itself 404.
+const FALLBACK_POSTER =
+  "data:image/svg+xml," +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9"><rect width="16" height="9" fill="#1a1a1a"/></svg>',
+  );
 
 export default function VideoSection() {
   const { video } = content;
   const id = video.youtubeId.trim();
 
   const [playing, setPlaying] = useState(false);
-  // maxres -> hq -> local placeholder, so the cover never shows up broken
+  // maxres -> hq -> inline placeholder, so the cover never shows up broken
   const [posterStep, setPosterStep] = useState(0);
 
   const posters = [
-    video.posterImage || `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
+    video.posterImage
+      ? withBasePath(video.posterImage)
+      : `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`,
     `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
-    "/img/video-cover.svg",
+    FALLBACK_POSTER,
   ];
 
   const play = () => {
