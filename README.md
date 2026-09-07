@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A birthday letter for Dealova
 
-## Getting Started
+A single-page, scroll-through birthday site — a sealed envelope, a live counter
+of how long we have been us, a letter, our story, photos, a video, and a wish
+with confetti at the end.
 
-First, run the development server:
+Built with Next.js 16 (App Router), React 19, TypeScript and Tailwind v4.
+It compiles to a **fully static** site — no server, no database, nothing running
+in the background — so it can be hosted anywhere for free.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open <http://localhost:3000>. The page updates the moment you save a file.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+content.ts              >>> ALL THE TEXT LIVES HERE <<<
+app/
+  layout.tsx            fonts, page title, tab icon
+  page.tsx              the order the sections appear in
+  globals.css           colours, fonts and all the styling
+  components/           one file per section of the page
+public/
+  img/                  photos
+  audio/                song.mp3 (optional — the music button hides if missing)
+```
 
-## Learn More
+The page, top to bottom: **Intro** (envelope) → **Hero** → **Counter** →
+**Letter** → **Story** → **Gallery** → **Video** → **Reasons** → **Wish** →
+**Footer**, with floating petals, a scroll-progress bar and a music toggle
+layered on top.
 
-To learn more about Next.js, take a look at the following resources:
+Every word on the page comes from [`content.ts`](content.ts) — you should never
+need to open a component to change wording.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Editing it
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+See **[HOW-TO-EDIT.md](HOW-TO-EDIT.md)** for the full walkthrough: the text, the
+photos, the YouTube video, the music, the date counter, the colour palette, and
+how to put it online.
 
-## Deploy on Vercel
+## Commands
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm dev     # local preview at localhost:3000
+pnpm build   # writes the static site to ./out
+pnpm lint    # checks the code
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploying
+
+`pnpm build` writes plain files into `out/`. Drag that folder onto
+[Netlify Drop](https://app.netlify.com/drop), or run `pnpm dlx vercel` and let
+Vercel build it. Details and the GitHub Pages caveat are in
+[HOW-TO-EDIT.md](HOW-TO-EDIT.md#putting-it-online-free).
+
+The page carries a `noindex` tag and the video is meant to be an *unlisted*
+YouTube upload, so the only way in is the link you send her.

@@ -3,10 +3,9 @@
    ----------------------------------------------------------------------------
    Everything between the "quotes" is text you can rewrite in your own words.
    Keep the quotes, the commas and the curly braces exactly where they are.
-   All the text below is DUMMY PLACEHOLDER TEXT - replace it all.
 
-   Image paths are relative to the /public folder, so "/img/photo-01.svg"
-   means the file public/img/photo-01.svg
+   Image paths are relative to the /public folder, so "/img/img-01.jpeg"
+   means the file public/img/img-01.jpeg
    ============================================================================ */
 
 export const content = {
@@ -86,25 +85,25 @@ export const content = {
         date: "Chapter One",
         title: "The day we met",
         text: "I did not know that day was going to change my whole life. You were just someone I met, and now you are the person I cannot imagine a single day without. God really knew what He was doing when He put you in front of me.",
-        image: "/img/story-01.svg",
+        image: "/img/img-03.jpeg",
       },
       {
         date: "Chapter Two",
         title: "The first real conversation",
         text: "The night we talked and talked and forgot what time it was. I kept re-reading our chat after you slept, and that was the exact moment I knew this was never going to be a casual thing for me.",
-        image: "/img/story-02.svg",
+        image: "/img/img-18.jpeg",
       },
       {
         date: "Chapter Three",
         title: "The first trip",
         text: "Going anywhere with you is my favourite thing, far away or only ten minutes from home. I get to see the version of you that only comes out when nobody else is watching, and that one is the one I love the most.",
-        image: "/img/story-03.svg",
+        image: "/img/img-09.jpeg",
       },
       {
         date: "Chapter Four",
         title: "Today",
         text: "And now here we are. From 25 October 2024 until today, two people chasing their master degrees and still choosing each other every single day. I would choose all of it again, even the hard parts, as long as it ends with you.",
-        image: "/img/story-04.svg",
+        image: "/img/img-16.jpeg",
       },
     ],
   },
@@ -116,14 +115,14 @@ export const content = {
     title: "Proof",
     subtitle: "A small pile of proof that we were here, being happy and silly together.",
     photos: [
-      { src: "/img/photo-01.svg", caption: "The smile I always come back to" },
-      { src: "/img/photo-02.svg", caption: "My favourite person, my favourite day" },
-      { src: "/img/photo-03.svg", caption: "We look ridiculous here and I love it" },
-      { src: "/img/photo-04.svg", caption: "Nothing special happened, that is why I keep it" },
-      { src: "/img/photo-05.svg", caption: "You laughing before the joke is finished" },
-      { src: "/img/photo-06.svg", caption: "Somewhere with you, that is always enough" },
-      { src: "/img/photo-07.svg", caption: "Proof that God is good to me" },
-      { src: "/img/photo-08.svg", caption: "And many more to come, sayang" },
+      { src: "/img/img-01.jpeg", caption: "That face. The one nobody else gets to see." },
+      { src: "/img/img-11.jpeg", caption: "520, kiss, baby, love. Our little photo strip." },
+      { src: "/img/img-27.jpeg", caption: "Holding small fires and being very happy about it." },
+      { src: "/img/img-25.jpeg", caption: "Two helmets, one motorbike, no idea where we were going." },
+      { src: "/img/img-14.jpeg", caption: "Sharing one bread like it was a whole dinner." },
+      { src: "/img/img-37.jpeg", caption: "The pizza was bigger than both of our heads." },
+      { src: "/img/img-23.jpeg", caption: "Hotpot night, your favourite kind of night." },
+      { src: "/img/img-12.jpeg", caption: "Sunshine, peace signs, and nowhere we had to be." },
     ],
   },
 
@@ -138,7 +137,7 @@ export const content = {
       "Put your headphones on first, and maybe do not watch this one in public.",
     youtubeId: "aqz-KE-bpKQ",
     // Leave "" to use YouTube's own thumbnail, or use "/img/your-cover.jpg"
-    posterImage: "",
+    posterImage: "/img/img-28.jpeg",
     caption: "Made for you, only for you. Please watch it until the end.",
   },
 
