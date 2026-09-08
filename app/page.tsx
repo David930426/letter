@@ -7,7 +7,7 @@ import Counter from "./components/Counter";
 import Letter from "./components/Letter";
 import Story from "./components/Story";
 import Gallery from "./components/Gallery";
-import VideoSection from "./components/VideoSection";
+import Spotlight from "./components/Spotlight";
 import Reasons from "./components/Reasons";
 import Wish from "./components/Wish";
 import Footer from "./components/Footer";
@@ -26,7 +26,7 @@ export default function Page() {
         <Letter />
         <Story />
         <Gallery />
-        <VideoSection />
+        <Spotlight />
         <Reasons />
         <Wish />
         <Footer />

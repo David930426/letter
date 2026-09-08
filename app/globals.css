@@ -917,8 +917,8 @@ body.opened .hero__scroll {
   translate: 0 0;
 }
 
-/* ================================================================ VIDEO */
-.video {
+/* ============================================================ SPOTLIGHT */
+.spotlight {
   background: radial-gradient(
     120% 100% at 50% 0%,
     var(--night-2),
@@ -926,11 +926,11 @@ body.opened .hero__scroll {
   );
   text-align: center;
 }
-.player {
+.spotlight__frame {
   position: relative;
-  max-width: 940px;
+  max-width: 640px;
   margin: 0 auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius);
   overflow: hidden;
   background: #1b0c15;
@@ -938,89 +938,23 @@ body.opened .hero__scroll {
     0 40px 90px -40px rgba(0, 0, 0, 0.9),
     0 0 0 1px rgba(235, 185, 196, 0.18);
 }
-.player iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-.facade {
-  position: absolute;
-  inset: 0;
-  border: 0;
-  padding: 0;
-  background: none;
-  cursor: pointer;
-}
-.facade img {
+.spotlight__frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.85) brightness(0.72);
-  transition:
-    transform 1s var(--ease),
-    filter 0.6s;
+  transition: transform 1s var(--ease);
 }
-.facade:hover img {
+.spotlight__frame:hover img {
   transform: scale(1.04);
-  filter: saturate(1) brightness(0.8);
 }
 
-.facade__play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  width: 84px;
-  height: 84px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(255, 246, 242, 0.92);
-  box-shadow: 0 18px 44px -14px rgba(0, 0, 0, 0.8);
-  transition: transform 0.4s var(--ease);
-}
-.facade:hover .facade__play {
-  transform: translate(-50%, -50%) scale(1.08);
-}
-.facade__play::before {
-  content: "";
-  width: 0;
-  height: 0;
-  margin-left: 5px;
-  border-left: 22px solid var(--rose-deep);
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-}
-.facade__ring {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 246, 242, 0.6);
-  animation: ripple 2.6s ease-out infinite;
-}
-@keyframes ripple {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(2.1);
-    opacity: 0;
-  }
-}
-
-.video__caption {
-  margin: 1.6rem auto 0;
-  max-width: 44ch;
-  font-size: 0.88rem;
-  font-style: italic;
-  color: rgba(251, 239, 234, 0.55);
+.spotlight__quote {
+  margin: 2rem auto 0;
+  max-width: 30ch;
+  font-family: var(--hand-font);
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+  line-height: 1.35;
+  color: var(--rose-soft);
 }
 
 /* ============================================================== REASONS */

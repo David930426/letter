@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { content } from "@/content";
 import { withBasePath } from "@/lib/base-path";
 
-export const PAUSE_MUSIC_EVENT = "birthday:pause-music";
-
 /**
  * Appears only once the browser confirms public/audio/song.mp3 actually exists,
  * so there is no dead button when no song has been added.
@@ -32,18 +30,10 @@ export default function MusicButton() {
     audio.addEventListener("canplay", found);
     audio.addEventListener("error", missing);
 
-    // the video player asks us to get out of the way when it starts
-    const pause = () => {
-      audio.pause();
-      setPlaying(false);
-    };
-    window.addEventListener(PAUSE_MUSIC_EVENT, pause);
-
     return () => {
       audio.removeEventListener("loadedmetadata", found);
       audio.removeEventListener("canplay", found);
       audio.removeEventListener("error", missing);
-      window.removeEventListener(PAUSE_MUSIC_EVENT, pause);
       audio.pause();
     };
   }, []);

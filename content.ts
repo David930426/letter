@@ -150,19 +150,16 @@ export const content = {
     ],
   },
 
-  /* ------------------------------------------------------------- VIDEO ---
-     Upload your video to YouTube (Unlisted is fine), then copy ONLY the id:
-        https://www.youtube.com/watch?v=XXXXXXXXXXX   ->   "XXXXXXXXXXX"
-        https://youtu.be/XXXXXXXXXXX                  ->   "XXXXXXXXXXX"    */
-  video: {
-    kicker: "Press play",
-    title: "I made you something",
-    subtitle:
-      "Put your headphones on first, and maybe do not watch this one in public.",
-    youtubeId: "aqz-KE-bpKQ",
-    // Leave "" to use YouTube's own thumbnail, or use "/img/your-cover.jpg"
-    posterImage: "/img/img-28.jpeg",
-    caption: "Made for you, only for you. Please watch it until the end.",
+  /* --------------------------------------------------------- SPOTLIGHT ---
+     One big photo with a short, personal line underneath it.
+     image: put your file in public/img/ and write "/img/your-file.jpg"    */
+  spotlight: {
+    kicker: "Just a look",
+    title: "The one I keep coming back to",
+    subtitle: "No caption needed, but here is one anyway.",
+    image: "/img/img-28.jpeg",
+    quote:
+      "Every year with you feels shorter than the one before it, and I want that to never change.",
   },
 
   /* ----------------------------------------------------------- REASONS ---

@@ -1,8 +1,8 @@
 # A birthday letter for Dealova
 
 A single-page, scroll-through birthday site — a sealed envelope, a live counter
-of how long we have been us, a letter, our story, photos, a video, and a wish
-with confetti at the end.
+of how long we have been us, a letter, our story, photos, and a wish with
+confetti at the end.
 
 Built with Next.js 16 (App Router), React 19, TypeScript and Tailwind v4.
 It compiles to a **fully static** site — no server, no database, nothing running
@@ -32,7 +32,7 @@ public/
 ```
 
 The page, top to bottom: **Intro** (envelope) → **Hero** → **Counter** →
-**Letter** → **Story** → **Gallery** → **Video** → **Reasons** → **Wish** →
+**Letter** → **Story** → **Gallery** → **Spotlight** → **Reasons** → **Wish** →
 **Footer**, with floating petals, a scroll-progress bar and a music toggle
 layered on top.
 
@@ -42,8 +42,8 @@ need to open a component to change wording.
 ## Editing it
 
 See **[HOW-TO-EDIT.md](HOW-TO-EDIT.md)** for the full walkthrough: the text, the
-photos, the YouTube video, the music, the date counter, the colour palette, and
-how to put it online.
+photos, the music, the date counter, the colour palette, and how to put it
+online.
 
 ## Commands
 
@@ -60,5 +60,4 @@ pnpm lint    # checks the code
 Vercel build it. Details and the GitHub Pages caveat are in
 [HOW-TO-EDIT.md](HOW-TO-EDIT.md#putting-it-online-free).
 
-The page carries a `noindex` tag and the video is meant to be an *unlisted*
-YouTube upload, so the only way in is the link you send her.
+The page carries a `noindex` tag, so the only way in is the link you send her.

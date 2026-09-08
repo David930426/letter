@@ -49,17 +49,15 @@ breaks, the error appears right in the browser and names the line.
 The `story-01..04.svg` and `photo-01..08.svg` files are the placeholders —
 delete them once your own photos are in.
 
-## 3. The video
+## 3. The spotlight photo
 
-1. Upload the video to YouTube. Set visibility to **Unlisted** — it will not
-   show up in search or on your channel, but the link still works.
-2. Copy just the id from the link:
-   - `https://www.youtube.com/watch?v=`**`Kj9x8Lm2Pq0`** → `Kj9x8Lm2Pq0`
-   - `https://youtu.be/`**`Kj9x8Lm2Pq0`** → `Kj9x8Lm2Pq0`
-3. Paste it into `content.ts` → `video.youtubeId`.
+One big photo with a short, personal line underneath it — no video needed.
+Edit `content.ts` → `spotlight`: `image` is the photo path (same rules as
+section 2), and `quote` is the line under it. Keep it short; it is set in a
+large handwritten font, so a sentence or two is plenty.
 
-The embed does not load until she clicks play, so the page stays fast and
-YouTube is not contacted before then.
+(If you'd rather have an actual video there instead, ask and it can be added
+back — it just needs a YouTube upload and its video id.)
 
 ## 4. Music (optional)
 
